@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/barcodes-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/font-asian-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/forms-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/hyph-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/io-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/itextpdf-5.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/joda-time-2.10.3.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/kernel-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/layout-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/logback.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/pdfa-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/pdftest-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/sign-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/slf4j.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/sqlite-jdbc-3.23.1.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/styled-xml-parser-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/svg-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/postgresql-42.7.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
