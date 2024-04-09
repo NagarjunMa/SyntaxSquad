@@ -34,5 +34,8 @@
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/styled-xml-parser-7.1.8.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/svg-7.1.8.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/postgresql-42.7.3.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernate-core-6.4.4.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/jakarta.persistence-api-3.2.0-M2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
