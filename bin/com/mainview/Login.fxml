@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mainview.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotelhub.controllers.LoginController">
    <children>
       <VBox layoutY="-3.0" prefHeight="412.0" prefWidth="551.0">
          <children>
@@ -40,7 +40,7 @@
                         <Image url="@../../../Icons&amp;Images/585e4bf3cb11b227491c339a.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="buttonSignIn" depthTest="DISABLE" layoutX="91.0" layoutY="341.0" mnemonicParsing="false" onAction="#Login" opacity="0.8" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Sign In">
+                  <Button fx:id="buttonSignIn" depthTest="DISABLE" layoutX="91.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleSignInButton" opacity="0.8" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Sign In">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -57,19 +57,21 @@
                               <Stop color="WHITE" offset="1.0" />
                            </stops>
                         </LinearGradient>
-                     </textFill></Button>
+                     </textFill>
+                  </Button>
                   <VBox blendMode="LIGHTEN" layoutX="35.0" layoutY="195.0">
                      <children>
                         <TextField fx:id="txtUsername" style="-fx-background-color: white; -fx-padding: 5 0 5 0; -fx-text-fill: white;" />
                         <Line endX="100.0" startX="-100.0" stroke="#00add2">
                            <VBox.margin>
                               <Insets top="3.0" />
-                           </VBox.margin></Line>
+                           </VBox.margin>
+                        </Line>
                      </children>
                   </VBox>
                   <VBox layoutX="35.0" layoutY="276.0">
                      <children>
-                        <PasswordField fx:id="txtPassword" onAction="#Login" style="-fx-background-color: white; -fx-padding: 5 0 5 0; -fx-text-fill: white;">
+                        <PasswordField fx:id="txtPassword" style="-fx-background-color: white; -fx-padding: 5 0 5 0; -fx-text-fill: white;">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>

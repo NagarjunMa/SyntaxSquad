@@ -16,7 +16,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernate-core-6.4.4.Final.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/jakarta.persistence-api-3.2.0-M2.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/javax.persistence-api-2.2.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/postgresql-42.7.3.jar"/>
@@ -27,8 +26,6 @@
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernatejar/dom4j-1.6.1.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernatejar/geolatte-geom-1.3.0.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernatejar/hibernate-c3p0-5.3.1.Final.jar"/>
-	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernatejar/hibernate-commons-annotations-5.0.3.Final.jar"/>
-	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernatejar/hibernate-core-5.3.1.Final.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernatejar/hibernate-envers-5.3.1.Final.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernatejar/hibernate-jpamodelgen-5.3.1.Final.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/jars/hibernatejar/hibernate-osgi-5.3.1.Final.jar"/>
@@ -64,5 +61,6 @@
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/sqlite-jdbc-3.23.1.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/styled-xml-parser-7.1.8.jar"/>
 	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Desktop/Academics/PSA/SyntaxSquad/libs/svg-7.1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/nagarjunmallesh/Downloads/hibernate-core-6.4.3.Final.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
