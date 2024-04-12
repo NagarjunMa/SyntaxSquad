@@ -154,6 +154,6 @@ public class Hotel {
     
     //Getters and Setters
     
-    
+     
     
 }

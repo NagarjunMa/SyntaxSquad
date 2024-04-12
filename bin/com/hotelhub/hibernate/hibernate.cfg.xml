@@ -6,7 +6,17 @@
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hotelhub</property>
-        <property name="hibernate.connection.username">nagarjunmallesh</property>
+        <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        
+        
+        
+        <mapping class="com.hotelhub.models.User"/>
+        <mapping class="com.hotelhub.models.Amenity"/>
+        <mapping class="com.hotelhub.models.Booking"/>
+        <mapping class="com.hotelhub.models.Hotel"/>
+        <mapping class="com.hotelhub.models.Review"/>
+        <mapping class="com.hotelhub.models.Room"/>
+        
     </session-factory>
 </hibernate-configuration>
