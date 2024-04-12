@@ -87,6 +87,6 @@ public class Room {
 	}
 
 	//Getters and Setters
-    
+         
 
 }

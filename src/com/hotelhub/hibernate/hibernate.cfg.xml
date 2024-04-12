@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
-		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hotelhub</property>
-        <property name="hibernate.connection.username">nagarjunmallesh</property>
+        <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <mapping class="com.hotelhub.models.User"/>
+        <mapping class="com.hotelhub.models.Booking"/>
+        <mapping class="com.hotelhub.models.Hotel"/>
+        <mapping class="com.hotelhub.models.Review"/>
+        <mapping class="com.hotelhub.models.Room"/>
+        <mapping class="com.hotelhub.models.Amenity"/>
     </session-factory>
 </hibernate-configuration>

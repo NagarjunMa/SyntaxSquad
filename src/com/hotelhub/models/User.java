@@ -1,8 +1,8 @@
 package com.hotelhub.models;
 
+import java.sql.Date;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,7 +11,6 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-
 @Table(name = "users")
 public class User {
     @Id
@@ -22,19 +21,61 @@ public class User {
     
     private String lastName;
 
-    private String dateOfBirth;
+    private Date dateOfBirth;
     
     private String phoneNo;
     
     private String email;
 
     private String password;
+    
+    private String address;
+    
+    private String gender;
 
     @OneToMany(mappedBy = "user")
     private List<Booking> bookings;
 
     @OneToMany(mappedBy = "user")
     private List<Review> reviews;
+    
+    
+    
+    
+
+	public User() {
+		super();
+	}
+
+	public User(Long userId, String firstName, String lastName, Date dateOfBirth, String phoneNo, String email,
+			String password, String address, String gender) {
+		super();
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dateOfBirth = dateOfBirth;
+		this.phoneNo = phoneNo;
+		this.email = email;
+		this.password = password;
+		this.address = address;
+		this.gender = gender;
+	}
+
+	public User(Long userId, String firstName, String lastName, Date dateOfBirth, String phoneNo, String email,
+			String password, String address, List<Booking> bookings, List<Review> reviews, String gender) {
+		super();
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dateOfBirth = dateOfBirth;
+		this.phoneNo = phoneNo;
+		this.email = email;
+		this.password = password;
+		this.address = address;
+		this.bookings = bookings;
+		this.reviews = reviews;
+		this.gender = gender;
+	}
 
 	public Long getUserId() {
 		return userId;
@@ -60,11 +101,11 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public String getDateOfBirth() {
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
@@ -107,6 +148,25 @@ public class User {
 	public void setReviews(List<Review> reviews) {
 		this.reviews = reviews;
 	}
+	
+	
+	public String getAddress() {
+		return address;
+	}
+	
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	
+	
 
     // Getters and setters
     
