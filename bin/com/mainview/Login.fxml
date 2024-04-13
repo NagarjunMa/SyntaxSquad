@@ -61,7 +61,7 @@
                   </Button>
                   <VBox blendMode="LIGHTEN" layoutX="35.0" layoutY="195.0">
                      <children>
-                        <TextField fx:id="txtUsername" style="-fx-background-color: white; -fx-padding: 5 0 5 0; -fx-text-fill: white;" />
+                        <TextField fx:id="txtUsername" style="-fx-background-color: white; -fx-padding: 5 0 5 0; -fx-text-fill: black;" />
                         <Line endX="100.0" startX="-100.0" stroke="#00add2">
                            <VBox.margin>
                               <Insets top="3.0" />
@@ -71,7 +71,7 @@
                   </VBox>
                   <VBox layoutX="35.0" layoutY="276.0">
                      <children>
-                        <PasswordField fx:id="txtPassword" style="-fx-background-color: white; -fx-padding: 5 0 5 0; -fx-text-fill: white;">
+                        <PasswordField fx:id="txtPassword" style="-fx-background-color: white; -fx-padding: 5 0 5 0; -fx-text-fill: black;">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
