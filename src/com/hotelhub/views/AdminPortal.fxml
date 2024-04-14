@@ -20,7 +20,7 @@
                <children>
                   <ImageView fitHeight="400.0" fitWidth="557.0" layoutX="-20.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../Icons&amp;Images/Images/Hotel_img.jpg" />
+                        <Image url="@../../../../Icons&amp;Images/Images/Hotel_img.jpg" />
                      </image>
                   </ImageView>
                </children>
@@ -56,6 +56,25 @@
                      </textFill>
                   </Button>
                   <Button fx:id="buttonAdminAddUser" depthTest="DISABLE" layoutX="65.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleAddUser" opacity="0.8" prefHeight="32.0" prefWidth="171.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Add User">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button fx:id="buttonAdminBack" depthTest="DISABLE" layoutX="65.0" layoutY="338.0" mnemonicParsing="false" onAction="#handleBackButtonToLogin" opacity="0.8" prefHeight="32.0" prefWidth="171.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Back">
                      <font>
                         <Font size="14.0" />
                      </font>

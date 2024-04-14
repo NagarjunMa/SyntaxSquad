@@ -33,6 +33,9 @@ public class LoginController {
 	@FXML
 	private Button buttonSignIn;
 
+	@FXML
+	private Button buttonNavAdminSignIn;
+	
     public static String username1;
 	
     
@@ -68,5 +71,45 @@ public class LoginController {
     }
     }
     
+//
+//	@FXML
+//	private void handleNavAdminSignInButton(ActionEvent event) {
+//	    try {
+//	        // Load the Admin Login FXML file
+//	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/hotelhub/views/AdminLogin.fxml"));
+//	        Parent adminLoginParent = loader.load();
+//
+//	        // Get the scene from the current stage
+//	        Scene adminLoginScene = new Scene(adminLoginParent);
+//	        
+//	        // Get the current stage
+//	        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//	        
+//	        // Set the scene on the stage
+//	        currentStage.setScene(adminLoginScene);
+//	        currentStage.show();
+//	    } catch (IOException e) {
+//	        e.printStackTrace();
+//	    }
+//	}
+    
+    @FXML
+    private void handleSignUpButton(ActionEvent event)  {
+	    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/hotelhub/views/UserSignUp.fxml"));
+        Parent adminLoginParent = loader.load();
 
+        // Get the scene from the current stage
+        Scene adminLoginScene = new Scene(adminLoginParent);
+        
+        // Get the current stage
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        
+        // Set the scene on the stage
+        currentStage.setScene(adminLoginScene);
+        currentStage.show();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+    }
 }
