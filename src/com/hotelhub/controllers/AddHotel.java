@@ -4,10 +4,17 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.hibernate.SessionFactory;
+
+import com.hotelhub.config.HotelContext;
 import com.hotelhub.config.NavigationManager;
+import com.hotelhub.dao.HotelDao;
+import com.hotelhub.hibernate.SessionManager;
 import com.hotelhub.models.Amenity;
 import com.hotelhub.models.Hotel;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -17,7 +24,8 @@ import javafx.scene.control.Alert.AlertType;
 
 public class AddHotel {
 
-	
+    private ObservableList<Amenity> amenityObservableList = FXCollections.observableArrayList();
+
 	
 	@FXML
 	private TextField txtHotelName; 
@@ -54,10 +62,10 @@ public class AddHotel {
 		Long zipcode = Long.parseLong(zipCodeTxt.getText());
 		int totalRooms = Integer.parseInt(totalRoomsTxt.getText());
 		int availableRooms = Integer.parseInt(availableRoomTxt.getText());
-		String amenity = amenityTxt.getText();
+		String amenityVal = amenityTxt.getText();
 		String description = descriptionTxt.getText();
 		
-		if(isValidate(hotelName, street, city, state, country, zipcode, totalRooms, availableRooms, amenity, description)) {
+		if(isValidate(hotelName, street, city, state, country, zipcode, totalRooms, availableRooms, amenityVal, description)) {
 			Hotel hotel = new Hotel();
 			
 			hotel.setName(hotelName);
@@ -70,16 +78,33 @@ public class AddHotel {
 			hotel.setAvailableRooms(availableRooms);
 			hotel.setDescription(description);
 			
-			Set<Amenity> amenities = new HashSet<>();
 			
-		}
-		
-		//work in progress
-		
-		
-		
+			Amenity amenity = new Amenity();
+			amenity.setAmenityName(amenityVal);
+			 if (!amenityObservableList.contains(amenity)) {
+	                amenityObservableList.add(amenity);
+	                amenityTxt.clear();
+	            }
+			
+	            Set<Amenity> amenities = new HashSet<>(amenityObservableList);
+	            hotel.setAmenities(amenities);
 
-		
+	            amenities.forEach(amenityObj -> amenityObj.setHotel(hotel));
+	            
+	            
+	            
+	    		SessionFactory sessionFactory = SessionManager.getSessionFactory();
+	            HotelDao hotelDao = new HotelDao(sessionFactory);
+	            hotelDao.save(hotel);
+	            HotelContext.setCurrentHotel(hotel);
+				Alert alert = new Alert(AlertType.CONFIRMATION);
+				alert.setTitle("Data added to the database!!");
+				alert.setHeaderText(null);
+				alert.setContentText("Hotel details are added to the database");
+				alert.showAndWait();
+	            
+
+		}
 		
 	}
 	

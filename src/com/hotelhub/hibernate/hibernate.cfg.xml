@@ -10,7 +10,7 @@
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">123123</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
         <mapping class="com.hotelhub.models.User"/>
         <mapping class="com.hotelhub.models.Booking"/>
         <mapping class="com.hotelhub.models.Hotel"/>
