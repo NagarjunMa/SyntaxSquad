@@ -1,5 +1,7 @@
 package com.hotelhub.models;
 
+import java.util.Objects;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,13 +17,26 @@ public class Amenity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long amenityId;
 
-    private String name;
+    private String amenityName;
 
-    private String description;
-
-    @ManyToOne
+	@ManyToOne
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
+	
+	
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Amenity)) return false;
+        Amenity amenity = (Amenity) o;
+        return Objects.equals(amenityName, amenity.amenityName) && Objects.equals(hotel, amenity.hotel);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(amenityName, hotel);
+    }
+	
 
 	public Long getAmenityId() {
 		return amenityId;
@@ -31,21 +46,14 @@ public class Amenity {
 		this.amenityId = amenityId;
 	}
 
-	public String getName() {
-		return name;
+    public String getAmenityName() {
+		return amenityName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setAmenityName(String amenityName) {
+		this.amenityName = amenityName;
 	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
+	
 
 	public Hotel getHotel() {
 		return hotel;

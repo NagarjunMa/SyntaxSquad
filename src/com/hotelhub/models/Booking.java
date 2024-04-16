@@ -22,20 +22,13 @@ public class Booking {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "hotel_id")
-    private Hotel hotel;
-
-    @ManyToOne
     @JoinColumn(name = "room_id")
     private Room room;
-
-    private Date
-    checkInDate;
-
+    private Date checkInDate;
     private Date checkOutDate;
-
     private String status;
-
+     // Confirmed, Pending, Cancelled
+    private int priority; 
 	public Long getBookingId() {
 		return bookingId;
 	}
@@ -50,14 +43,6 @@ public class Booking {
 
 	public void setUser(User user) {
 		this.user = user;
-	}
-
-	public Hotel getHotel() {
-		return hotel;
-	}
-
-	public void setHotel(Hotel hotel) {
-		this.hotel = hotel;
 	}
 
 	public Room getRoom() {
@@ -91,6 +76,16 @@ public class Booking {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+	
+	
 
     // Getters and setters
     

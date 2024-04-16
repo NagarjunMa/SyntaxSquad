@@ -10,6 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.sql.Connection;
 
+import com.hotelhub.config.NavigationManager;
 import com.hotelhub.config.PostgresConnection;
 
 
@@ -22,7 +23,7 @@ import com.hotelhub.config.PostgresConnection;
 	@Override
 	public void start(Stage stage) {
 		try {
-			
+			NavigationManager.setStage(stage);
 			primaryStage = stage;
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Login.fxml"));
 			MainScene = new Scene(root);
@@ -30,7 +31,7 @@ import com.hotelhub.config.PostgresConnection;
 			/*primaryStage.setX(350);
 			primaryStage.setY(250);*/
 			primaryStage.setResizable(false);
-			primaryStage.setTitle("Hotel Reservation System");
+			primaryStage.setTitle("HotelHub");
 			
 			
 			

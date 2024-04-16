@@ -32,6 +32,7 @@ public class User {
     private String address;
     
     private String gender;
+    private String userType; 
 
     @OneToMany(mappedBy = "user")
     private List<Booking> bookings;
@@ -48,7 +49,7 @@ public class User {
 	}
 
 	public User(Long userId, String firstName, String lastName, Date dateOfBirth, String phoneNo, String email,
-			String password, String address, String gender) {
+			String password, String address, String gender, String userType) {
 		super();
 		this.userId = userId;
 		this.firstName = firstName;
@@ -59,6 +60,7 @@ public class User {
 		this.password = password;
 		this.address = address;
 		this.gender = gender;
+		this.userType = userType;
 	}
 
 	public User(Long userId, String firstName, String lastName, Date dateOfBirth, String phoneNo, String email,
@@ -75,6 +77,7 @@ public class User {
 		this.bookings = bookings;
 		this.reviews = reviews;
 		this.gender = gender;
+		this.userType = userType;
 	}
 
 	public Long getUserId() {
@@ -165,6 +168,15 @@ public class User {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+	
 	
 	
 
