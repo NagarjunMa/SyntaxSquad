@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import org.hibernate.SessionFactory;
 import java.util.regex.Pattern;
 
+import com.hotelhub.config.NavigationManager;
 import com.hotelhub.dao.UserDao;
 import com.hotelhub.hibernate.SessionManager;
 import com.hotelhub.models.User;
@@ -79,14 +80,15 @@ public class AdminPortalController {
 	public void handleAddUser(ActionEvent event) throws IOException {
 		try {
 		    // Load the admin dashboard page
-		    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/hotelhub/views/AdminUserAdd.fxml"));
-		    Parent adminDashboard = loader.load();
-		    Scene adminDashboardScene = new Scene(adminDashboard);
-
-		    // Get the current stage and set the new scene
-		    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		    stage.setScene(adminDashboardScene);
-		    stage.show();
+//		    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/hotelhub/views/AdminUserAdd.fxml"));
+//		    Parent adminDashboard = loader.load();
+//		    Scene adminDashboardScene = new Scene(adminDashboard);
+//
+//		    // Get the current stage and set the new scene
+//		    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//		    stage.setScene(adminDashboardScene);
+//		    stage.show();
+			NavigationManager.navigateTo("/com/hotelhub/views/AdminUserAdd.fxml", "Admin Page");
 		} catch(Exception e) {
 		    e.printStackTrace();
 		    // Show an error message if loading the admin dashboard fails
@@ -101,13 +103,16 @@ public class AdminPortalController {
 	
 	@FXML
 	public void handleAddHotel(ActionEvent event) throws IOException {
-		
-	}
-	
-	
-	@FXML
-	public void handleAddHotelToDb(ActionEvent event) throws IOException {
-		
+		try {
+			NavigationManager.navigateTo("/com/hotelhub/views/AdminHotelDetails.fxml", "Admin Hotel Dashboard");
+		} catch(Exception e) {
+			e.printStackTrace();
+		    Alert alert = new Alert(Alert.AlertType.ERROR);
+		    alert.setTitle("Error");
+		    alert.setHeaderText("Failed to load admin dashboard");
+		    alert.setContentText("An error occurred while loading the admin dashboard. Please try again.");
+		    alert.showAndWait();
+		}
 	}
 	
 	@FXML
@@ -150,19 +155,9 @@ public class AdminPortalController {
     private void handleBackButton(ActionEvent event) throws IOException {
         // Add your event handling logic here
         System.out.println("Back button clicked!");
-        Parent adminPortal = FXMLLoader.load(getClass().getResource("/com/hotelhub/views/AdminPortal.fxml"));
-        Scene adminPortalScene = new Scene(adminPortal);
-
-        // Get the current stage and set the new scene
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(adminPortalScene);
-        stage.show();
+        NavigationManager.goBack();
+        
     }
-	
-	@FXML
-	public void handleBackBtnHotel(ActionEvent event) throws IOException {
-		
-	}
 	
 	
 	public static java.sql.Date convertToSqlDate(String dateString) {
@@ -182,16 +177,18 @@ public class AdminPortalController {
     @FXML
     private void handleBackButtonToLogin(ActionEvent event) throws IOException {
         // Add your event handling logic here
-        System.out.println("Back button clicked!");
-        Parent adminPortal = FXMLLoader.load(getClass().getResource("/com/mainview/Login.fxml"));
-        Scene adminPortalScene = new Scene(adminPortal);
-
-        // Get the current stage and set the new scene
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(adminPortalScene);
-        stage.show();
+    	NavigationManager.goBack();
     }
+    
+    
+    
+    
+    
+    
+    
 	
+    
+    //validation for registration fields entered
 	
     private boolean validateFields() {
         return validateFirstName() && validateLastName() && validateAddress() && validatePhoneNumber()

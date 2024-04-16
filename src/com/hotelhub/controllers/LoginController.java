@@ -2,6 +2,8 @@ package com.hotelhub.controllers;
 
 import java.io.IOException;
 
+import com.hotelhub.config.NavigationManager;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -47,14 +49,16 @@ public class LoginController {
     		if(username.equals("admin") && password.equals("Admin@1234")) {
     			try {
     			    // Load the admin dashboard page
-    			    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/hotelhub/views/AdminPortal.fxml"));
-    			    Parent adminDashboard = loader.load();
-    			    Scene adminDashboardScene = new Scene(adminDashboard);
-
-    			    // Get the current stage and set the new scene
-    			    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    			    stage.setScene(adminDashboardScene);
-    			    stage.show();
+//    			    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/hotelhub/views/AdminPortal.fxml"));
+//    			    Parent adminDashboard = loader.load();
+//    			    Scene adminDashboardScene = new Scene(adminDashboard);
+//
+//    			    // Get the current stage and set the new scene
+//    			    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//    			    stage.setScene(adminDashboardScene);
+//    			    stage.show();
+    				
+    				NavigationManager.navigateTo("/com/hotelhub/views/AdminPortal.fxml", "Admin Portal");
     			} catch (Exception e) {
     			    e.printStackTrace();
     			    // Show an error message if loading the admin dashboard fails

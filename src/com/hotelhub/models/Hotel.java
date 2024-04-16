@@ -1,6 +1,8 @@
 package com.hotelhub.models;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -30,20 +32,18 @@ public class Hotel {
     private long zipCode;
 
     private String description;
-
-    private Double rating;
+    
+    private int totalRooms;
+    private int availableRooms;
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     private List<Room> rooms;
 
     @OneToMany(mappedBy = "hotel")
-    private List<Booking> bookings;
-
-    @OneToMany(mappedBy = "hotel")
     private List<Review> reviews;
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
-    private List<Amenity> amenities;
+    private Set<Amenity> amenities = new HashSet<>();  // Using Set to avoid duplicates
 
 	public Long getHotelId() {
 		return hotelId;
@@ -109,14 +109,6 @@ public class Hotel {
 		this.description = description;
 	}
 
-	public Double getRating() {
-		return rating;
-	}
-
-	public void setRating(Double rating) {
-		this.rating = rating;
-	}
-
 	public List<Room> getRooms() {
 		return rooms;
 	}
@@ -125,13 +117,6 @@ public class Hotel {
 		this.rooms = rooms;
 	}
 
-	public List<Booking> getBookings() {
-		return bookings;
-	}
-
-	public void setBookings(List<Booking> bookings) {
-		this.bookings = bookings;
-	}
 
 	public List<Review> getReviews() {
 		return reviews;
@@ -141,13 +126,32 @@ public class Hotel {
 		this.reviews = reviews;
 	}
 
-	public List<Amenity> getAmenities() {
+	public Set<Amenity> getAmenities() {
 		return amenities;
 	}
 
-	public void setAmenities(List<Amenity> amenities) {
+	public void setAmenities(Set<Amenity> amenities) {
 		this.amenities = amenities;
 	}
+
+	public int getTotalRooms() {
+		return totalRooms;
+	}
+
+	public void setTotalRooms(int totalRooms) {
+		this.totalRooms = totalRooms;
+	}
+
+	public int getAvailableRooms() {
+		return availableRooms;
+	}
+
+	public void setAvailableRooms(int availableRooms) {
+		this.availableRooms = availableRooms;
+	}
+
+	
+	
     
     
     //Getters and Setters

@@ -25,7 +25,7 @@ public class Room {
 	private Hotel hotel;
 	private double price;
 	private int capacity;
-	private boolean availability;
+	private String roomStatus; 
 	
     @OneToMany(mappedBy = "room")
     private List<Booking> bookings;
@@ -70,14 +70,6 @@ public class Room {
 		this.capacity = capacity;
 	}
 
-	public boolean isAvailability() {
-		return availability;
-	}
-
-	public void setAvailability(boolean availability) {
-		this.availability = availability;
-	}
-
 	public List<Booking> getBookings() {
 		return bookings;
 	}
@@ -85,6 +77,16 @@ public class Room {
 	public void setBookings(List<Booking> bookings) {
 		this.bookings = bookings;
 	}
+
+	public String getRoomStatus() {
+		return roomStatus;
+	}
+
+	public void setRoomStatus(String roomStatus) {
+		this.roomStatus = roomStatus;
+	}
+	
+	
 
 	//Getters and Setters
          
