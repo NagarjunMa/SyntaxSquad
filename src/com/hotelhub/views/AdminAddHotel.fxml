@@ -13,7 +13,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotelhub.controllers.AdminPortalController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotelhub.controllers.AddHotel">
    <children>
       <VBox layoutX="10.0" layoutY="7.0" prefHeight="547.0" prefWidth="864.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -97,7 +97,7 @@
             </AnchorPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btnAddHotel" depthTest="DISABLE" layoutX="81.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleAddHotelToDb" opacity="0.8" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Add  Hotel">
+                  <Button fx:id="btnAddHotel" depthTest="DISABLE" layoutX="81.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleAddHotelBtn" opacity="0.8" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Add  Hotel">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -116,7 +116,7 @@
                         </LinearGradient>
                      </textFill>
                   </Button>
-                  <Button fx:id="btnUpdate" depthTest="DISABLE" layoutX="367.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleAddHotelToDb" opacity="0.8" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Update  Hotel">
+                  <Button fx:id="btnUpdate" depthTest="DISABLE" layoutX="367.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleUpdateBtn" opacity="0.8" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Update  Hotel">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -135,7 +135,7 @@
                         </LinearGradient>
                      </textFill>
                   </Button>
-                  <Button fx:id="backBtn" depthTest="DISABLE" layoutX="614.0" layoutY="50.0" mnemonicParsing="false" onAction="#Login" opacity="0.8" prefHeight="32.0" prefWidth="96.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Back">
+                  <Button fx:id="backBtn" depthTest="DISABLE" layoutX="614.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleBackBtn" opacity="0.8" prefHeight="32.0" prefWidth="96.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Back">
                      <font>
                         <Font size="14.0" />
                      </font>

@@ -10,8 +10,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.sql.Connection;
 
+import org.hibernate.SessionFactory;
+
+import com.hotelhub.config.HotelContext;
 import com.hotelhub.config.NavigationManager;
 import com.hotelhub.config.PostgresConnection;
+import com.hotelhub.dao.HotelDao;
+import com.hotelhub.hibernate.SessionManager;
+import com.hotelhub.models.Hotel;
 
 
 	public class Main extends Application{
@@ -23,6 +29,9 @@ import com.hotelhub.config.PostgresConnection;
 	@Override
 	public void start(Stage stage) {
 		try {
+			
+	
+			
 			NavigationManager.setStage(stage);
 			primaryStage = stage;
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Login.fxml"));

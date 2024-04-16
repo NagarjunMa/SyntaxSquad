@@ -13,12 +13,16 @@ public class AdminHotelManagement {
 	
 	@FXML
 	public void handleRoomBtn(ActionEvent event) throws IOException {
-		
+		try {
+			NavigationManager.navigateTo("/com/hotelhub/views/Rooms.fxml", "Add Rooms");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@FXML
 	public void handleBookingBtn(ActionEvent event) throws IOException {
-		
+
 	}
 	
 	@FXML
