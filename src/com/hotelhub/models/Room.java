@@ -29,6 +29,8 @@ public class Room {
 	
     @OneToMany(mappedBy = "room")
     private List<Booking> bookings;
+    
+   
 
 	public int getRoomId() {
 		return roomId;

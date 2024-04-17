@@ -3,13 +3,27 @@ package com.hotelhub.controllers;
 import java.io.IOException;
 
 import com.hotelhub.config.NavigationManager;
+import com.hotelhub.models.Room;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableView;
 
 public class AdminHotelManagement {
 
+	@FXML
+	private TableView<Room> roomStatusTbl;
 	
+	
+	
+	public void initialize() {
+		
+	}
+	
+	
+	public void setup() {
+		
+	}
 	
 	@FXML
 	public void handleRoomBtn(ActionEvent event) throws IOException {

@@ -7,25 +7,23 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-import com.hotelhub.config.RoomStatusManager;
-import com.hotelhub.models.Room;
+import com.hotelhub.models.Booking;
+import com.hotelhub.models.Hotel;
 
-public class RoomDao {
+public class BookingDao {
 
 	private SessionFactory sessionFactory;
-    private RoomStatusManager statusManager = new RoomStatusManager();
 
-
-    public RoomDao(SessionFactory sessionFactory) {
+    public BookingDao(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
-    public void save(Room room) {
+    public void save(Booking booking) {
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
-            session.persist(room);
+            session.persist(booking);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -37,21 +35,41 @@ public class RoomDao {
         }
     }
 
-    public Room findById(Long roomId) {
+    public Booking findById(Long bookingId) {
         Session session = sessionFactory.openSession();
         try {
-            return session.get(Room.class, roomId);
+            return session.get(Booking.class, bookingId);
         } finally {
             session.close();
         }
     }
 
-    public void update(Room room) {
+    public void update(Booking booking) {
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
-            session.merge(room);
+            session.merge(booking);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
+    
+    
+
+
+    public void delete(Booking booking) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            session.remove(booking);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -63,56 +81,27 @@ public class RoomDao {
         }
     }
 
-    public void delete(Room room) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = null;
-        try {
-            transaction = session.beginTransaction();
-            session.remove(room);
-            transaction.commit();
-        } catch (Exception e) {
-            if (transaction != null) {
-                transaction.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
-    }
-
-    public List<Room> findAll() {
+    public List<Booking> findAll() {
         Session session = sessionFactory.openSession();
         try {
-            String hql = "FROM Room";
-            Query<Room> query = session.createQuery(hql, Room.class);
+            String hql = "FROM Booking";
+            Query<Booking> query = session.createQuery(hql, Booking.class);
             return query.getResultList();
         } finally {
             session.close();
         }
     }
-    
-    
-    public List<Room> findAllAndUpdateStatus() {
-        List<Room> rooms = findAll();
-        rooms.forEach(room -> statusManager.updateRoomStatus(room.getRoomId(), room.getRoomStatus()));
-        return rooms;
-    }
-    
-    
-    
 
-    public Room findByType(String type) {
+    public Hotel findByName(String name) {
         Session session = sessionFactory.openSession();
         try {
-            String hql = "FROM Room WHERE roomtype = :type";
-            Query<Room> query = session.createQuery(hql, Room.class);
-            query.setParameter("type", type);
+            String hql = "FROM Hotel WHERE name = :name";
+            Query<Hotel> query = session.createQuery(hql, Hotel.class);
+            query.setParameter("name", name);
             return query.uniqueResult();
         } finally {
             session.close();
         }
     }
-	
-	
 	
 }

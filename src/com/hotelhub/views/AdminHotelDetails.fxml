@@ -1,169 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="652.0" prefWidth="1155.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotelhub.controllers.AdminHotelManagement">
    <children>
-      <HBox focusTraversable="true" layoutX="-9.0" layoutY="8.0" prefHeight="619.0" prefWidth="286.0">
+      <AnchorPane fx:id="anchorPane" layoutX="252.0" prefHeight="652.0" prefWidth="896.0">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="149.0" prefWidth="264.0">
-               <HBox.margin>
-                  <Insets bottom="6.5" left="6.5" right="6.5" top="6.5" />
-               </HBox.margin>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
+            <AnchorPane prefHeight="85.0" prefWidth="903.0" style="-fx-background-color: #66ACEC;">
                <children>
-                  <VBox prefHeight="193.0" prefWidth="266.0">
-                     <children>
-                        <ImageView fitHeight="164.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Icons&amp;Images/Images/Hotel%20Rhema%20Kallianpur.jpg" />
-                           </image>
-                           <VBox.margin>
-                              <Insets bottom="14.0" left="7.0" right="7.0" top="7.0" />
-                           </VBox.margin>
-                        </ImageView>
-                        <Line endX="164.2928924560547" endY="1.6033649444580078E-5" startX="-100.0" />
-                     </children>
-                     <padding>
-                        <Insets top="5.0" />
-                     </padding>
-                  </VBox>
-                  <VBox alignment="CENTER" prefHeight="265.0" prefWidth="266.0">
-                     <padding>
-                        <Insets top="5.0" />
-                     </padding>
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="264.0" style="-fx-background-color: #00add2; -fx-border-radius: 50;">
-                           <children>
-                              <ImageView fitHeight="25.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../Icons&amp;Images/Icons/icons8-reservation_2_filled.png" />
-                                 </image>
-                                 <HBox.margin>
-                                    <Insets right="30.0" />
-                                 </HBox.margin>
-                              </ImageView>
-                              <Button fx:id="roomBtn" mnemonicParsing="false" onAction="#handleRoomBtn" prefHeight="38.0" prefWidth="152.0" stylesheets="@../../css/logInButton.css" text="Rooms" HBox.hgrow="ALWAYS">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <VBox.margin>
-                              <Insets bottom="5.0" />
-                           </VBox.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="264.0" style="-fx-background-color: #00add2;">
-                           <children>
-                              <ImageView fitHeight="25.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../Icons&amp;Images/Icons/icons8-bed_filled.png" />
-                                 </image>
-                                 <HBox.margin>
-                                    <Insets right="30.0" />
-                                 </HBox.margin>
-                              </ImageView>
-                              <Button fx:id="bookingBtn" mnemonicParsing="false" onAction="#handleBookingBtn" prefHeight="38.0" prefWidth="157.0" stylesheets="@../../css/logInButton.css" text="Bookings" HBox.hgrow="ALWAYS">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <VBox.margin>
-                              <Insets bottom="5.0" />
-                           </VBox.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="264.0" style="-fx-background-color: #00add2;">
-                           <children>
-                              <ImageView pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../Icons&amp;Images/Icons/icons8-gender_neutral_user_filled.png" />
-                                 </image>
-                                 <HBox.margin>
-                                    <Insets right="30.0" />
-                                 </HBox.margin>
-                              </ImageView>
-                              <Button fx:id="hotelBtn" mnemonicParsing="false" onAction="#handleHotelDetails" prefHeight="38.0" prefWidth="161.0" stylesheets="@../../css/logInButton.css" text="Hotel" HBox.hgrow="ALWAYS">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="19.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <VBox.margin>
-                              <Insets bottom="5.0" />
-                           </VBox.margin>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <AnchorPane prefHeight="34.0" prefWidth="266.0" />
-                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="264.0" style="-fx-background-color: #00add2;">
-                     <children>
-                        <ImageView fitHeight="37.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Icons&amp;Images/Icons/icons8-back-button-90.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets right="30.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <Button fx:id="backBtn" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="38.0" prefWidth="161.0" stylesheets="@../../css/logInButton.css" text="Back Button" HBox.hgrow="ALWAYS">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </HBox>
+                  <Label layoutX="325.0" layoutY="20.0" prefHeight="31.0" prefWidth="253.0" text="Welcome Admin!" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni 72 Oldstyle Bold" size="35.0" />
+                     </font>
+                  </Label>
                </children>
-            </VBox>
+            </AnchorPane>
+            <AnchorPane layoutY="85.0" prefHeight="282.0" prefWidth="401.0">
+               <children>
+                  <Label layoutX="128.0" layoutY="14.0" prefHeight="38.0" prefWidth="146.0" text="Rooms Status">
+                     <font>
+                        <Font name="Bodoni 72 Oldstyle Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="roomStatusTbl" layoutX="14.0" layoutY="64.0" prefHeight="204.0" prefWidth="375.0" >
+                        <columns>
+            					<TableColumn fx:id="roomIdColumn" text="Room ID" />
+           			 			<TableColumn fx:id="roomStatusColumn" text="Status" />
+        				</columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="652.0" prefWidth="253.0">
+         <children>
+            <Button fx:id="hotelBtn" layoutX="51.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleHotelDetails" prefHeight="38.0" prefWidth="145.0" text="Hotel">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <stylesheets>
+                  <URL value="@../../css/logInButton.css" />
+                  <URL value="@../../../css/logInButton.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="roomBtn" layoutX="51.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleRoomBtn" prefHeight="38.0" prefWidth="132.0" text="Rooms">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <stylesheets>
+                  <URL value="@../../css/logInButton.css" />
+                  <URL value="@../../../css/logInButton.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="backBtn" layoutX="61.0" layoutY="599.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="39.0" prefWidth="132.0" style="-fx-background-color: #D3D3D3; -fx-border-color: #D3D3D3; -fx-background-radius: 15px; -fx-border-radius: 15px;" stylesheets="@../../css/logInButton.css" text="Back Button">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="bookingBtn" layoutX="51.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleBookingBtn" prefHeight="38.0" prefWidth="132.0" text="Bookings">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <stylesheets>
+                  <URL value="@../../css/logInButton.css" />
+                  <URL value="@../../../css/logInButton.css" />
+               </stylesheets>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="27.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Icons&amp;Images/Images/Hotel%20Rhema%20Kallianpur.jpg" />
+               </image>
+            </ImageView>
          </children>
-      </HBox>
-      <AnchorPane fx:id="anchorPane" layoutX="265.0" prefHeight="652.0" prefWidth="883.0" />
+      </AnchorPane>
    </children>
 </AnchorPane>
