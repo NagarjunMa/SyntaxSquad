@@ -34,9 +34,9 @@
          <children>
             <AnchorPane prefHeight="395.0" prefWidth="302.0">
                <children>
-                  <ImageView accessibleRole="BUTTON" fitHeight="95.0" fitWidth="94.0" focusTraversable="true" layoutX="100.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView accessibleRole="BUTTON" fitHeight="131.0" fitWidth="134.0" focusTraversable="true" layoutX="85.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../Icons&amp;Images/585e4bf3cb11b227491c339a.png" />
+                        <Image url="@../../HotelHub_Logo.jpg" />
                      </image>
                   </ImageView>
                   <Button fx:id="buttonSignIn" depthTest="DISABLE" layoutX="34.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleSignInButton" opacity="0.8" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Sign In">
@@ -72,11 +72,6 @@
                   </Label>
                   <Label fx:id="errorID" layoutX="34.0" layoutY="211.0" prefHeight="17.0" prefWidth="201.0" style="-fx-text-fill: #81e5cb;" textFill="#81e5cb" />
                   <Label fx:id="errorPassword" layoutX="34.0" layoutY="287.0" prefHeight="17.0" prefWidth="201.0" style="-fx-text-fill: #81e5cb;" />
-                  <Label alignment="CENTER" layoutX="117.0" layoutY="107.0" text="User" textFill="#c9c7c7">
-                     <font>
-                        <Font name="Arial" size="28.0" />
-                     </font>
-                  </Label>
                   <PasswordField fx:id="txtPassword" layoutX="37.0" layoutY="254.0" prefHeight="28.0" prefWidth="201.0" style="-fx-background-color: white; -fx-padding: 5 0 5 0; -fx-text-fill: black;" />
                   <Line endX="100.0" layoutX="137.0" layoutY="288.0" startX="-100.0" stroke="#00add2" />
                   <Button fx:id="buttonSignUp" depthTest="DISABLE" layoutX="152.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleSignUpButton" opacity="0.8" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Sign Up">
@@ -100,6 +95,11 @@
                   </Button>
                   <TextField fx:id="txtUsername" layoutX="36.0" layoutY="177.0" prefHeight="28.0" prefWidth="201.0" style="-fx-background-color: white; -fx-padding: 5 0 5 0; -fx-text-fill: black;" />
                   <Line endX="100.0" layoutX="137.0" layoutY="209.0" startX="-100.0" stroke="#00add2" />
+                  <Label layoutX="103.0" layoutY="124.0" text="Hotel Hub">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>
