@@ -57,7 +57,6 @@ public class UserSignUpController {
 		
 		  // Validation for each field
 	    if (!validateFields()) {
-	        // If validation fails, display an error message and return
 	        showAlert(Alert.AlertType.ERROR, "Validation Error", "Please fill in all fields correctly.");
 	        return;
 	    }
@@ -171,7 +170,6 @@ public class UserSignUpController {
     private boolean validateDateOfBirth() {
         String dob = dobTxt.getText();
         // Validate date of birth using regex or other methods as needed
-        // Example: Check if the date is in a valid format
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             sdf.setLenient(false);
@@ -236,7 +234,6 @@ public class UserSignUpController {
         	java.util.Date utilDate = dateFormat.parse(dateString);
             return new java.sql.Date(utilDate.getTime());
         } catch (ParseException e) {
-            // Handle the case when the date string is in an invalid format
             e.printStackTrace();
             return null;
         }

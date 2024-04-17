@@ -40,7 +40,6 @@ public class AdminLoginController {
 				NavigationManager.navigateTo("/com/hotelhub/views/AdminPortal.fxml", "Admin Page");
 			} catch (Exception e) {
 			    e.printStackTrace();
-			    // Show an error message if loading the admin dashboard fails
 			    Alert alert = new Alert(Alert.AlertType.ERROR);
 			    alert.setTitle("Error");
 			    alert.setHeaderText("Failed to load admin dashboard");

@@ -29,14 +29,14 @@
       </VBox>
       <VBox alignment="CENTER" layoutX="402.0" layoutY="-1.0" prefHeight="403.0" prefWidth="301.0" style="-fx-background-color: #279B78;">
          <children>
-            <AnchorPane prefHeight="447.0" prefWidth="269.0">
+            <AnchorPane prefHeight="447.0" prefWidth="269.0" style="-fx-background-color: #003366;">
                <children>
                   <Label alignment="CENTER" layoutX="63.0" layoutY="33.0" text="Admin Portal" textFill="#c9c7c7">
                      <font>
                         <Font name="Arial Bold" size="28.0" />
                      </font>
                   </Label>
-                  <Button fx:id="buttonAdminAddHotel" depthTest="DISABLE" layoutX="65.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleAddHotel" opacity="0.8" prefHeight="32.0" prefWidth="174.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="Hotel Details">
+                  <Button fx:id="buttonAdminAddHotel" depthTest="DISABLE" layoutX="65.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleAddHotel" opacity="0.8" prefHeight="32.0" prefWidth="174.0" style="-fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" stylesheets="@../../../css/search.css" text="Hotel Details">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -55,7 +55,7 @@
                         </LinearGradient>
                      </textFill>
                   </Button>
-                  <Button fx:id="buttonAdminAddUser" depthTest="DISABLE" layoutX="65.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleAddUser" opacity="0.8" prefHeight="32.0" prefWidth="171.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="User Details">
+                  <Button fx:id="buttonAdminAddUser" depthTest="DISABLE" layoutX="65.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleAddUser" opacity="0.8" prefHeight="32.0" prefWidth="171.0" style="-fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" stylesheets="@../../../css/search.css" text="User Details">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -74,7 +74,7 @@
                         </LinearGradient>
                      </textFill>
                   </Button>
-                  <Button fx:id="buttonAdminBack" depthTest="DISABLE" layoutX="65.0" layoutY="338.0" mnemonicParsing="false" onAction="#handleBackButtonToLogin" opacity="0.8" prefHeight="32.0" prefWidth="171.0" style="-fx-background-color: #C70039; -fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" text="SignOut">
+                  <Button fx:id="buttonAdminBack" depthTest="DISABLE" layoutX="65.0" layoutY="338.0" mnemonicParsing="false" onAction="#handleBackButtonToLogin" opacity="0.8" prefHeight="32.0" prefWidth="171.0" style="-fx-background-radius: 13; -fx-border-color: grey; -fx-border-radius: 13;" stylesheets="@../../../css/search.css" text="SignOut">
                      <font>
                         <Font size="14.0" />
                      </font>

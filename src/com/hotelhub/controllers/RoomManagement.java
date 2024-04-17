@@ -85,7 +85,6 @@ public class RoomManagement {
 		// Add columns to the table
 		roomTbl.getColumns().addAll(roomIdCol, roomTypeCol, hotelNameCol, priceCol, capacityCol, roomStatusCol);
 		
-		// Optionally, load room data here if you have a method to do so
 		// roomTbl.setItems(loadRoomData());
 	}
 	

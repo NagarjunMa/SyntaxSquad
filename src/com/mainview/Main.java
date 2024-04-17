@@ -30,8 +30,6 @@ import com.hotelhub.models.Hotel;
 	public void start(Stage stage) {
 		try {
 			
-	
-			
 			NavigationManager.setStage(stage);
 			primaryStage = stage;
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Login.fxml"));
@@ -41,8 +39,6 @@ import com.hotelhub.models.Hotel;
 			primaryStage.setY(250);*/
 			primaryStage.setResizable(false);
 			primaryStage.setTitle("HotelHub");
-			
-			
 			
 			stage.setOnCloseRequest(event -> {
 				

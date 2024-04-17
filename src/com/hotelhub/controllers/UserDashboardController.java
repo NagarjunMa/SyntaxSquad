@@ -104,14 +104,12 @@ public class UserDashboardController {
     @FXML
     private void buttonSignOut() {
         try {
-            // Handle logout action here, such as clearing user session, navigating to login page, etc.
             SessionHandler.setCurrentSessionId(null);
             SessionHandler.clearSession();
             NavigationManager.navigateTo("/com/mainview/Login.fxml", "Login");
 
             System.out.println("User logged out");
         } catch (IOException e) {
-            // Handle any IOException that may occur during navigation
             e.printStackTrace();
         }
     }
