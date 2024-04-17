@@ -89,8 +89,6 @@ public class Booking {
         return user.getFirstName();
     }
 	
-
-    // Getters and setters
     
     
 }

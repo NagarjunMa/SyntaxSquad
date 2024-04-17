@@ -235,7 +235,6 @@ public class BookRoomController {
 	        // Get the current session ID
 	        String sessionId = SessionHandler.getCurrentSessionId();
 
-	        // Check if session ID is not null
 	        if (sessionId != null) {
 	            // Retrieve the user session using the session ID
 	            UserSessionManager userSessionManager = new UserSessionManager();
