@@ -20,25 +20,25 @@
    <children>
       <HBox focusTraversable="true" prefHeight="619.0" prefWidth="286.0">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="149.0" prefWidth="264.0">
+            <VBox alignment="TOP_CENTER" prefHeight="149.0" prefWidth="0.0">
                <children>
-                  <VBox prefHeight="80.0" prefWidth="266.0" VBox.vgrow="SOMETIMES">
-                     <children>
-                        <ImageView fitHeight="164.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Icons&amp;Images/Images/logo.png" />
-                           </image>
-                           <VBox.margin>
-                              <Insets bottom="14.0" left="7.0" right="7.0" top="7.0" />
-                           </VBox.margin>
-                        </ImageView>
-                        <Line endX="164.2928924560547" endY="1.6033649444580078E-5" startX="-100.0" />
-                     </children>
+                  <ImageView fitHeight="230.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../HotelHub_Logo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label text="Hotel Hub">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Line endX="164.2928924560547" endY="1.6033649444580078E-5" startX="-100.0" />
+                  <VBox prefHeight="88.0" prefWidth="266.0" style="-fx-background-color: #279B78;" VBox.vgrow="SOMETIMES">
                      <padding>
                         <Insets top="5.0" />
                      </padding>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="292.0" prefWidth="266.0" style="-fx-background-color: #279B78;" VBox.vgrow="SOMETIMES">
+                  <VBox alignment="CENTER" prefHeight="152.0" prefWidth="277.0" style="-fx-background-color: #279B78;" VBox.vgrow="SOMETIMES">
                      <padding>
                         <Insets top="5.0" />
                      </padding>
