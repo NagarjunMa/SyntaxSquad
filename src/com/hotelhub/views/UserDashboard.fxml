@@ -82,7 +82,7 @@
                                     <Insets right="30.0" />
                                  </HBox.margin>
                               </ImageView>
-                              <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="157.0" style="-fx-background-color: #C70039;" stylesheets="@../../../css/logInButton.css" text="Book Room" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBookRoom" mnemonicParsing="false" onAction="#buttonBookRoom" prefHeight="38.0" prefWidth="157.0" style="-fx-background-color: #C70039;" stylesheets="@../../../css/logInButton.css" text="Book Room" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
