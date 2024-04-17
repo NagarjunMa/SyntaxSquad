@@ -96,7 +96,7 @@ public class UserDashboardController {
         NavigationManager.navigateTo("/com/hotelhub/views/BookRoom.fxml", "Book Room");
     }
     
-    
+   
     @FXML
     private void buttonSignOut() {
         try {
