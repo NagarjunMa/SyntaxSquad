@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -33,22 +32,22 @@
                <children>
                   <AnchorPane prefHeight="123.0" prefWidth="789.0" style="-fx-background-color: #279B78; -fx-border-color: grey;">
                      <children>
-                        <DatePicker layoutX="355.0" layoutY="19.0" />
-                        <DatePicker layoutX="355.0" layoutY="64.0" />
+                        <DatePicker fx:id="checkInDatePicker" layoutX="355.0" layoutY="19.0" />
+                        <DatePicker fx:id="checkOutDatePicker" layoutX="355.0" layoutY="64.0" />
                         <Label layoutX="249.0" layoutY="24.0" text="Check in Date" textFill="WHITE" />
                         <Label layoutX="250.0" layoutY="69.0" text="Check out Date" textFill="WHITE" />
-                        <Button layoutX="651.0" layoutY="64.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" stylesheets="@../../../css/search.css" text="Reset">
+                        <Button fx:id="buttonReset" layoutX="650.0" layoutY="20.0" mnemonicParsing="false" onAction="#buttonReset" prefHeight="26.0" prefWidth="85.0" stylesheets="@../../../css/search.css" text="Reset">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <ComboBox layoutX="26.0" layoutY="19.0" prefHeight="27.0" prefWidth="177.0" promptText=" Room Type" />
-                        <Button layoutX="651.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" stylesheets="@../../../css/search.css" text="Search">
+                        <ComboBox fx:id="comboRoomType" layoutX="26.0" layoutY="19.0" prefHeight="27.0" prefWidth="177.0" promptText=" Room Type" />
+                        <Button fx:id="buttonBook" layoutX="556.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" stylesheets="@../../../css/search.css" text="Book">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button layoutX="561.0" layoutY="64.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" stylesheets="@../../../css/search.css" text="Book">
+                        <Button fx:id="buttonBack" layoutX="604.0" layoutY="65.0" mnemonicParsing="false" onAction="#buttonBack" prefHeight="26.0" prefWidth="85.0" stylesheets="@../../../css/search.css" text="Back">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -59,16 +58,7 @@
             </VBox>
             <VBox prefHeight="458.0" prefWidth="789.0">
                <children>
-                  <TableView prefHeight="459.0" prefWidth="789.0" style="-fx-background-color: white; -fx-border-color: grey;">
-                     <columns>
-                        <TableColumn fx:id="columnNo" editable="false" minWidth="30.0" prefWidth="51.0" sortable="false" text="No" />
-                        <TableColumn fx:id="columnRoomNo" editable="false" prefWidth="91.0" sortable="false" text="Room No" />
-                        <TableColumn fx:id="columnRoomType" editable="false" minWidth="135.0" prefWidth="137.0" sortable="false" text="Room Type" />
-                        <TableColumn fx:id="columnCost" editable="false" minWidth="69.0" prefWidth="104.0" sortable="false" text="Cost" />
-                        <TableColumn fx:id="columnMaxPeople" editable="false" prefWidth="143.0" sortable="false" text="Maximum People" />
-                        <TableColumn fx:id="columnAvailability" editable="false" prefWidth="255.3333740234375" sortable="false" text="Availability" />
-                     </columns>
-                  </TableView>
+                  <TableView fx:id="roomTbl" prefHeight="459.0" prefWidth="789.0" style="-fx-background-color: white; -fx-border-color: grey;" />
                </children>
             </VBox>
          </children>
