@@ -24,37 +24,37 @@
             </Text>
             <TextField fx:id="firstNameTxt" alignment="TOP_LEFT" layoutX="151.0" layoutY="148.0" promptText="Enter your First Name" style="-fx-border-color: #c9642c;">
                <font>
-                  <Font name="COCOMAT Light" size="16.0" />
+                  <Font name="Bodoni 72 Bold" size="19.0" />
                </font>
             </TextField>
             <TextField fx:id="lastNameTxt" alignment="TOP_LEFT" layoutX="399.0" layoutY="148.0" promptText="Last Name" style="-fx-border-color: #c9642c;">
                <font>
-                  <Font name="COCOMAT Light" size="16.0" />
+                  <Font name="Bodoni 72 Bold" size="19.0" />
                </font>
             </TextField>
             <TextField fx:id="addressTxt" alignment="TOP_LEFT" layoutX="151.0" layoutY="224.0" promptText="Address" style="-fx-border-color: #c9642c;">
                <font>
-                  <Font name="COCOMAT Light" size="16.0" />
+                  <Font name="Bodoni 72 Bold" size="19.0" />
                </font>
             </TextField>
             <TextField fx:id="genderTxt" alignment="TOP_LEFT" layoutX="399.0" layoutY="224.0" promptText="Gender" style="-fx-border-color: #c9642c;">
                <font>
-                  <Font name="COCOMAT Light" size="16.0" />
+                  <Font name="Bodoni 72 Bold" size="19.0" />
                </font>
             </TextField>
             <TextField fx:id="phoneNumberTxt" alignment="TOP_LEFT" layoutX="151.0" layoutY="315.0" promptText="Phone Number" style="-fx-border-color: #c9642c;">
                <font>
-                  <Font name="COCOMAT Light" size="16.0" />
+                  <Font name="Bodoni 72 Bold" size="19.0" />
                </font>
             </TextField>
             <TextField fx:id="dobTxt" alignment="TOP_LEFT" layoutX="401.0" layoutY="313.0" prefHeight="34.0" prefWidth="220.0" promptText="Date Of Birth" style="-fx-border-color: #c9642c;">
                <font>
-                  <Font name="COCOMAT Light" size="16.0" />
+                  <Font name="Bodoni 72 Bold" size="19.0" />
                </font>
             </TextField>
             <TextField fx:id="emailTxt" alignment="TOP_LEFT" layoutX="151.0" layoutY="418.0" promptText="Email" style="-fx-border-color: #c9642c;">
                <font>
-                  <Font name="COCOMAT Light" size="16.0" />
+                  <Font name="Bodoni 72 Bold" size="19.0" />
                </font>
             </TextField>
             <Text layoutX="204.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
@@ -147,12 +147,12 @@
             </Text>
             <PasswordField fx:id="passwordTxt" alignment="TOP_LEFT" layoutX="399.0" layoutY="418.0" promptText="Password" style="-fx-border-color: #c9642c;">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Bodoni 72 Bold" size="19.0" />
                </font>
             </PasswordField>
 		<PasswordField fx:id="confirmPasswordTxt" alignment="TOP_LEFT" layoutX="151.0" layoutY="500.0" promptText="Confirm Password" style="-fx-border-color: #c9642c;">
 		    <font>
-		        <Font size="16.0" />
+		        <Font name="Bodoni 72 Bold" size="19.0" />
 		    </font>
 		</PasswordField>
          </children>

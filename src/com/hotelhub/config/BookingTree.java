@@ -23,7 +23,6 @@ public class BookingTree {
         if (bookings.isEmpty()) {
             return null;
         }
-        System.out.println("bookings --> " + bookings);
         Booking rootBooking = bookings.get(0);
         BookingTreeNode root = new BookingTreeNode(rootBooking);
 
@@ -58,7 +57,6 @@ public class BookingTree {
     public List<Booking> searchBookingsByUser(User user) {
         List<Booking> bookings = new ArrayList<>();
         searchBookingsByUserHelper(root, user, bookings);
-        System.out.println("inside searchBOOKINGS ---> " + bookings);
         return bookings;
     }
 
@@ -66,7 +64,6 @@ public class BookingTree {
         if (node == null) {
             return;
         }
-        System.out.println("user details --> " + user.getFirstName());
         if (node.getBooking().getUser().getFirstName().equals(user.getFirstName())) {
             bookings.add(node.getBooking());
         }
