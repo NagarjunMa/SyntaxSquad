@@ -28,7 +28,7 @@ public class SortUtil {
         int i = 0, j = 0, k = 0;
 
         while (i < leftSize && j < rightSize) {
-            if (leftHalf.get(i).getUserFirstName().compareToIgnoreCase(rightHalf.get(j).getUserFirstName()) <= 0) {
+            if (leftHalf.get(i).getCheckInDate().compareTo(rightHalf.get(j).getCheckInDate()) <= 0) {
                 bookings.set(k++, leftHalf.get(i++));
             } else {
                 bookings.set(k++, rightHalf.get(j++));
