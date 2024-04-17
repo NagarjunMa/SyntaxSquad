@@ -49,6 +49,9 @@ public class UserDashboardController {
     private PasswordField fieldPassword;
     
     @FXML
+    private Button buttonBookRoom;
+    
+    @FXML
     private PasswordField fieldConfirmPassword;
     
     private User user;
@@ -88,6 +91,12 @@ public class UserDashboardController {
             fieldAddress.setText(user.getAddress());
         }
     }
+    @FXML
+    private void buttonBookRoom() throws IOException {
+        NavigationManager.navigateTo("/com/hotelhub/views/BookRoom.fxml", "Book Room");
+    }
+    
+    
     @FXML
     private void buttonSignOut() {
         try {
