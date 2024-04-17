@@ -92,16 +92,16 @@ public class BookingDao {
         }
     }
 
-    public Hotel findByName(String name) {
-        Session session = sessionFactory.openSession();
-        try {
-            String hql = "FROM Hotel WHERE name = :name";
-            Query<Hotel> query = session.createQuery(hql, Hotel.class);
-            query.setParameter("name", name);
-            return query.uniqueResult();
-        } finally {
-            session.close();
-        }
-    }
+//    public Hotel findByName(String name) {
+//        Session session = sessionFactory.openSession();
+//        try {
+//            String hql = "FROM Booking WHERE name = :name";
+//            Query<Hotel> query = session.createQuery(hql, Hotel.class);
+//            query.setParameter("name", name);
+//            return query.uniqueResult();
+//        } finally {
+//            session.close();
+//        }
+//    }
 	
 }

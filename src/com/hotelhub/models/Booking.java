@@ -85,6 +85,9 @@ public class Booking {
 		this.priority = priority;
 	}
 	
+    public String getUserFirstName() {
+        return user.getFirstName();
+    }
 	
 
     // Getters and setters
