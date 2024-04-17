@@ -30,12 +30,7 @@
                         <Font name="Bodoni 72 Oldstyle Bold" size="25.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="roomStatusTbl" layoutX="14.0" layoutY="64.0" prefHeight="204.0" prefWidth="375.0" >
-                        <columns>
-            					<TableColumn fx:id="roomIdColumn" text="Room ID" />
-           			 			<TableColumn fx:id="roomStatusColumn" text="Status" />
-        				</columns>
-                  </TableView>
+                  <TableView fx:id="roomStatusTbl" layoutX="14.0" layoutY="64.0" prefHeight="204.0" prefWidth="375.0" />
                </children>
             </AnchorPane>
          </children></AnchorPane>

@@ -164,6 +164,7 @@ public class RoomManagement {
 	
 	
     private void loadRoomData() {
+
     	System.out.println("inside loading more data from db");
     	SessionFactory sessionFactory = SessionManager.getSessionFactory();
     	RoomDao roomDao = new RoomDao(sessionFactory);

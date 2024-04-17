@@ -1,6 +1,8 @@
 package com.hotelhub.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,11 +15,17 @@ import com.hotelhub.models.Room;
 public class RoomDao {
 
 	private SessionFactory sessionFactory;
-    private RoomStatusManager statusManager = new RoomStatusManager();
+    private RoomStatusManager statusManager;
 
 
     public RoomDao(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
+    }
+    
+    
+    private void initializeRoomStatuses() {
+        List<Room> rooms = findAll();
+        rooms.forEach(room -> statusManager.updateRoomStatus(room.getRoomId(), room.getRoomStatus()));
     }
 
     public void save(Room room) {
@@ -92,11 +100,25 @@ public class RoomDao {
     }
     
     
-    public List<Room> findAllAndUpdateStatus() {
-        List<Room> rooms = findAll();
-        rooms.forEach(room -> statusManager.updateRoomStatus(room.getRoomId(), room.getRoomStatus()));
-        return rooms;
+    public Map<Integer, String> findAllRoomsAndUpdateStatus() {
+        RoomStatusManager statusManager = RoomStatusManager.getInstance(); // Singleton access
+        Session session = sessionFactory.openSession();
+        Map<Integer, String> roomStatusMap = new HashMap<>();
+        try {
+            String hql = "FROM Room";
+            Query<Room> query = session.createQuery(hql, Room.class);
+            List<Room> rooms = query.getResultList();
+            // Update the singleton RoomStatusManager and local map
+            rooms.forEach(room -> {
+                statusManager.updateRoomStatus(room.getRoomId(), room.getRoomStatus());
+                roomStatusMap.put(room.getRoomId(), room.getRoomStatus());
+            });
+        } finally {
+            session.close();
+        }
+        return roomStatusMap;
     }
+
     
     
     
