@@ -53,7 +53,7 @@
                                     <Insets right="30.0" />
                                  </HBox.margin>
                               </ImageView>
-                              <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="152.0" style="-fx-background-color: #C70039;" stylesheets="@../../../css/logInButton.css" text="Booking History " HBox.hgrow="ALWAYS">
+                              <Button fx:id="bookingHistory" mnemonicParsing="false" onAction="#handleBookingHistory" prefHeight="38.0" prefWidth="152.0" style="-fx-background-color: #C70039;" stylesheets="@../../../css/logInButton.css" text="Booking History " HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>

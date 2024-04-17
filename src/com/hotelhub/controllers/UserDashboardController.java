@@ -7,6 +7,7 @@ import com.hotelhub.config.SessionHandler;
 import com.hotelhub.config.UserSession;
 import com.hotelhub.config.UserSessionManager; // Correct import statement
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -35,6 +36,9 @@ public class UserDashboardController {
 
     @FXML
     private TextField fieldLastName;
+    
+    @FXML 
+    private Button bookingHistory;
 
     @FXML
     private TextField fieldPhone;
@@ -111,6 +115,18 @@ public class UserDashboardController {
             e.printStackTrace();
         }
     }
+    
+    
+    @FXML
+    public void handleBookingHistory(ActionEvent event) throws IOException {
+    	try {
+    		NavigationManager.navigateTo("/com/hotelhub/views/BookingHistory.fxml", "Booking History");
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    }
+    
+    
 
     @FXML
     private void buttonUpdate() {
