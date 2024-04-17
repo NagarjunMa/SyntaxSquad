@@ -177,7 +177,14 @@ public class AdminPortalController {
     @FXML
     private void handleBackButtonToLogin(ActionEvent event) throws IOException {
         // Add your event handling logic here
-    	NavigationManager.goBack();
+        Parent adminPortal = FXMLLoader.load(getClass().getResource("/com/mainview/Login.fxml"));
+        Scene adminPortalScene = new Scene(adminPortal);
+
+        // Get the current stage and set the new scene
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(adminPortalScene);
+        stage.show();
+//    	NavigationManager.goBack();
     }
     
     

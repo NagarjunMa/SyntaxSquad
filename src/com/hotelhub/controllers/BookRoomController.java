@@ -59,13 +59,10 @@ public class BookRoomController {
 	
 	@FXML
 	private void initialize() {
-	    // Add room types to the combo box
 	    comboRoomType.getItems().addAll("All", "Deluxe", "Executive");
 	    
-	    // Set "All" as the default selection
 	    comboRoomType.getSelectionModel().selectFirst();
 	    
-	    // Add an event handler to the combo box's selection change event
 	    comboRoomType.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
 	        if (newValue != null) {
 	            if (newValue.equals("All")) {
@@ -76,12 +73,10 @@ public class BookRoomController {
 	        }
 	    });
 	    
-	    // Add event handler for the book button
         buttonBook.setOnAction(event -> {
             bookRoom();
         });
 	    
-	    // You can continue initializing components or perform other setup tasks here
 	    setupRoomTable();
 	    loadRoomData();
 	}
@@ -114,10 +109,9 @@ public class BookRoomController {
 
 
 		private void resetTable() {
-		    // Check if the original list of rooms is not null, if so, restore it
 		    if (originalRooms != null) {
 		        roomTbl.setItems(originalRooms);
-		        originalRooms = null; // Clear the original list after restoring
+		        originalRooms = null; 
 		    }
 		}
 		
@@ -128,7 +122,6 @@ public class BookRoomController {
 	 
 	  @SuppressWarnings("unchecked")
 	private void setupRoomTable() {
-	        // Define table columns (similar to your existing setupRoomTable method)
 	    	   TableColumn<Room, Integer> roomIdCol = new TableColumn<>("Room ID");
 	    	    TableColumn<Room, String> roomTypeCol = new TableColumn<>("Room Type");
 	    	    TableColumn<Room, String> hotelNameCol = new TableColumn<>("Hotel Name");
@@ -136,7 +129,6 @@ public class BookRoomController {
 	    	    TableColumn<Room, Integer> capacityCol = new TableColumn<>("Capacity");
 	    	    TableColumn<Room, String> roomStatusCol = new TableColumn<>("Room Status");
 
-	    	    // Associate each column with the corresponding property of the Room object
 	    	    roomIdCol.setCellValueFactory(new PropertyValueFactory<>("roomId"));
 	    	    roomTypeCol.setCellValueFactory(new PropertyValueFactory<>("roomType"));
 	    	    hotelNameCol.setCellValueFactory(cellData ->
@@ -145,7 +137,6 @@ public class BookRoomController {
 	    	    capacityCol.setCellValueFactory(new PropertyValueFactory<>("capacity"));
 	    	    roomStatusCol.setCellValueFactory(new PropertyValueFactory<>("roomStatus"));
 
-	    	    // Add columns to the TableView
 	    	    roomTbl.getColumns().addAll(roomIdCol, roomTypeCol, hotelNameCol, priceCol, capacityCol, roomStatusCol);
 
 	    }
@@ -219,13 +210,12 @@ public class BookRoomController {
 	            booking.setRoom(selectedRoom);
 	            booking.setCheckInDate(Date.valueOf(checkInDate));
 	            booking.setCheckOutDate(Date.valueOf(checkOutDate));
-	            booking.setStatus("Pending"); // Default status
-	            booking.setPriority(1); // Default priority
+	            booking.setStatus("Pending"); 
+	            booking.setPriority(1); 
 
 
 	            bookingDao.update(booking);
 
-	            // Update room status to "Booked" in the database
 	            selectedRoom.setRoomStatus("Booked");
 	            roomDao.update(selectedRoom);
 

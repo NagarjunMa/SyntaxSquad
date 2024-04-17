@@ -65,13 +65,6 @@ import com.hotelhub.models.Hotel;
 	
 	public static void main(String[] args) {
 		System.out.println("inside main method");
-//        Connection conn = PostgresConnection.Connector();
-//        System.out.println("testing " + conn);
-//        if (conn == null) {
-//
-//            System.err.println("Failed to make connection to the database. Exiting...");
-//            System.exit(1);
-//        }
 		
 		PostgresConnection.checkConnection();
 		launch(args);
