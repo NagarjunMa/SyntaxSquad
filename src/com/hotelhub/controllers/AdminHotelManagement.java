@@ -56,7 +56,11 @@ public class AdminHotelManagement {
 	
 	@FXML
 	public void handleBookingBtn(ActionEvent event) throws IOException {
-
+		try {
+			NavigationManager.navigateTo("/com/hotelhub/views/BookingAdmin.fxml", "Admin Booking");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@FXML
@@ -74,17 +78,6 @@ public class AdminHotelManagement {
 	public void handleBackBtn(ActionEvent event) throws IOException {
 		NavigationManager.goBack();	
 	}
-	
-//    private void loadRoomData() {
-//    	System.out.println("inside loading more data from db");
-//    	SessionFactory sessionFactory = SessionManager.getSessionFactory();
-//    	RoomDao roomDao = new RoomDao(sessionFactory);
-//    	
-//        List<Room> rooms = roomDao.findAllAndUpdateStatus();
-//        System.out.println("testting"+rooms);
-//        ObservableList<Room> observableRooms = FXCollections.observableArrayList(rooms);
-//        roomStatusTbl.setItems(observableRooms);
-//    }
 	
 	private void loadRoomData() {
 	    RoomDao roomDao = new RoomDao(SessionManager.getSessionFactory());
