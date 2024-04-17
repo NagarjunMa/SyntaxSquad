@@ -253,7 +253,6 @@ public class AdminPortalController {
 
     private boolean validateGender() {
         String gender = genderTxt.getText();
-        // You can add specific validations for gender if needed
         return true;
     }
 
