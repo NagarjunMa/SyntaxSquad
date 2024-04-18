@@ -16,7 +16,7 @@
          <children>
             <AnchorPane prefHeight="85.0" prefWidth="903.0" style="-fx-background-color: #66ACEC;">
                <children>
-                  <Label layoutX="325.0" layoutY="20.0" prefHeight="31.0" prefWidth="253.0" text="Welcome Admin!" textAlignment="CENTER" textFill="WHITE">
+                  <Label layoutX="290.0" layoutY="17.0" prefHeight="51.0" prefWidth="286.0" text="Welcome Admin!" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Bodoni 72 Oldstyle Bold" size="35.0" />
                      </font>
@@ -25,12 +25,12 @@
             </AnchorPane>
             <AnchorPane layoutY="85.0" prefHeight="282.0" prefWidth="401.0">
                <children>
-                  <Label layoutX="128.0" layoutY="14.0" prefHeight="38.0" prefWidth="146.0" text="Rooms Status">
+                  <Label layoutX="361.0" layoutY="14.0" prefHeight="38.0" prefWidth="159.0" text="Rooms Status">
                      <font>
                         <Font name="Bodoni 72 Oldstyle Bold" size="25.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="roomStatusTbl" layoutX="14.0" layoutY="64.0" prefHeight="204.0" prefWidth="375.0" />
+                  <TableView fx:id="roomStatusTbl" layoutX="14.0" layoutY="64.0" prefHeight="473.0" prefWidth="866.0" />
                </children>
             </AnchorPane>
          </children></AnchorPane>
@@ -60,7 +60,7 @@
                   <URL value="@../../../css/logInButton.css" />
                </stylesheets>
             </Button>
-            <Button fx:id="backBtn" layoutX="61.0" layoutY="599.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="39.0" prefWidth="132.0" style="-fx-background-color: #D3D3D3; -fx-border-color: #D3D3D3; -fx-background-radius: 15px; -fx-border-radius: 15px;" stylesheets="@../../css/logInButton.css" text="Back Button">
+            <Button fx:id="backBtn" layoutX="61.0" layoutY="599.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="39.0" prefWidth="132.0" style="-fx-background-color: #D3D3D3; -fx-border-color: #D3D3D3; -fx-background-radius: 15px; -fx-border-radius: 15px;" stylesheets="@../../css/logInButton.css" text="Back">
                <font>
                   <Font size="19.0" />
                </font>
