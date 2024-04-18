@@ -262,16 +262,6 @@
                         </Label>
                         <PasswordField fx:id="fieldPassword" layoutX="305.0" layoutY="304.0" prefHeight="28.0" prefWidth="242.0" />
                         <PasswordField fx:id="fieldConfirmPassword" layoutX="305.0" layoutY="341.0" prefHeight="28.0" prefWidth="242.0" />
-                        <Label layoutX="204.0" layoutY="378.0" text="User Type">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="364.0" layoutY="378.0" text="type">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
                      </children>
                   </AnchorPane>
                </children>
