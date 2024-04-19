@@ -76,5 +76,6 @@
 	<classpathentry kind="lib" path="libs/sqlite-jdbc-3.23.1.jar"/>
 	<classpathentry kind="lib" path="libs/styled-xml-parser-7.1.8.jar"/>
 	<classpathentry kind="lib" path="libs/svg-7.1.8.jar"/>
+	<classpathentry kind="lib" path="jars/jbcrypt-0.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
