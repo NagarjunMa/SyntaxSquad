@@ -21,6 +21,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class UserSignUpController {
 	
@@ -74,6 +75,9 @@ public class UserSignUpController {
 	    String email = emailTxt.getText();
 	    String password = passwordTxt.getText();
 
+	 // Hash the password
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+	    
 	    // Convert date of birth to SQL date
 	    java.sql.Date dob = convertToSqlDate(dateOfBirth);
 
@@ -85,7 +89,7 @@ public class UserSignUpController {
 	    user.setPhoneNo(phoneNumber);
 	    user.setGender(gender);
 	    user.setEmail(email);
-	    user.setPassword(password);
+	    user.setPassword(hashedPassword);
 	    user.setDateOfBirth(dob);
 
 	    // Save the user data to the database
